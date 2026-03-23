@@ -183,6 +183,7 @@ async function loadFeed(feed) {
 
     lastUpdated.textContent = `Updated ${new Date().toLocaleTimeString()}`;
     clearSkeletons();
+    loading = false;
     await loadPage(false);
   } catch (err) {
     clearSkeletons();
