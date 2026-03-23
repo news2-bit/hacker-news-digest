@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hacker News Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Hacker News<span class="accent">.</span></h1>
+        <p class="subtitle">Daily digest — powered by the official HN API</p>
+      </div>
+      <div class="last-updated" id="lastUpdated"></div>
+    </div>
+
+    <!-- Feed tabs -->
+    <div class="feed-tabs" id="feedTabs">
+      <button class="feed-tab active" data-feed="topstories">🔥 Top</button>
+      <button class="feed-tab" data-feed="beststories">⭐ Best</button>
+      <button class="feed-tab" data-feed="newstories">🆕 New</button>
+      <button class="feed-tab" data-feed="askstories">💬 Ask HN</button>
+      <button class="feed-tab" data-feed="showstories">🚀 Show HN</button>
+      <button class="feed-tab" data-feed="jobstories">💼 Jobs</button>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader" hidden>
+      <div class="spinner"></div>
+      <span id="loaderText">Loading stories…</span>
+    </div>
+
+    <!-- Error -->
+    <div class="error" id="error" hidden></div>
+
+    <!-- Stories list -->
+    <div class="stories" id="stories"></div>
+
+    <!-- Load more -->
+    <div class="load-more-wrap" id="loadMoreWrap" hidden>
+      <button id="loadMoreBtn">Load more</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
